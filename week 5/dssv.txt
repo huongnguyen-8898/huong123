@@ -1,0 +1,3 @@
+       MSV	                      Ho va ten	       gioi tinh	       ngay sinh	 diem trung binh
+         1	                              1	               1	 01 / 01 / 0001		 1.00
+         1	                              1	               1	 01 / 01 / 0001		 1.00
