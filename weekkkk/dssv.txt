@@ -1,0 +1,5 @@
+       MSV	                      Ho va ten	       gioi tinh	       ngay sinh	 diem trung binh
+b16dcdt104	           Nguyen Thi Thu Huong	              nu	 08 / 08 / 1998		 9.50
+b16dcdt124	                 Tran Dang Khoa	             nam	 16 / 10 / 1998		 9.00
+b16dcdt111	                   nguyen van b	             nam	 09 / 09 / 1998		 7.00
+b16dcdt033	                   nguyen thi c	              nu	 09 / 02 / 1998		 6.70
