@@ -2,7 +2,7 @@
  * shiftbitcir.c
  *
  *  Created on: Jan 20, 2021
- *      Author: cuonglv22
+ *      Author: huong
  */
 
 #include<stdio.h>
