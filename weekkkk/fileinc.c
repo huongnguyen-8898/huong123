@@ -18,9 +18,7 @@ void read_file_byte(const char *filename, char *ouput){
 }
 void write_file(const char *filename, char *input1, char *input2){
 	FILE *fp;
-	int i,l1,l2;
-	l1=strlen(input1);
-	l2=strlen(input2);
+	int i;
 	fp=fopen(filename,"w");
 	fprintf(fp,"%s  %s%s",input1,"hoan doi thanh:",input2);
 	fclose(fp);
@@ -29,7 +27,7 @@ char *bytestring_to_bitstring(char *input){
 	int l,i;
 	char *output;
 	l=strlen(input);
-	output=malloc(4*l);
+	output=malloc(4*l+1);
 	for (i=0;i<l;i++){
 		switch (*(input+i)) {
 			case '0':
@@ -90,14 +88,38 @@ char *bytestring_to_bitstring(char *input){
 	}
 	return output;
 }
+char *shifstring(char *input){
+	int l,i;
+	char *tmp;
+	l=strlen(input);
+	tmp=malloc(l+1);
+	for(i=0;i<l;i++){
+		*(tmp+i)=*(input+l-1-i);
+	}
+	return tmp;
+}
+char *shifstring_with_number_byte(int n, char *input){
+	char *output;
+	int numbit=n*8;
+	int l=strlen(input);
+	output=malloc(l+1);
+	char *tmp;
+	int i,j;
+	int count;
+	tmp=malloc(n*8+1);
+	for(i=0;i<l;i++){
+		for(j=0;j<numbit;i++){
+		*(tmp+j)= *(input+i);
+		}
+}
 
 void display(char *input){
 	printf("%s\n",(input));
 
 }
 int main(){
-	char *a;
-	char *b;
+	char *a,*b,*c;
+
 	a=(char*)malloc(max*sizeof(char));
 	printf("chuoi byte trong file data.txt: ");
 	read_file_byte("data.txt",a);
@@ -106,10 +128,16 @@ int main(){
 	printf("doi ra chuoi bit thanh: ");
 	b=bytestring_to_bitstring(a);
 	display(b);
-	//write_file("output.txt",a,b);
+	c=(char*)malloc(max*sizeof(char));
+	c=shifstring(b);
+	write_file("output.txt",b,c);
 	free(a);
 	free(b);
 }
+
+
+
+
 
 
 
