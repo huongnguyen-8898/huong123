@@ -1,0 +1,17 @@
+ĐỀ THI LẬP TRÌNH C – PHÒNG XLTH
+Viết chương trình thực hiện các chức năng sau:
+1.	Đọc một chuỗi byte từ file data.txt (có sẵn, 32 byte), hiển thị chuỗi byte và chuỗi bit tương ứng lên màn hình
+2.	Thực hiện hoán đổi vị trị các bit theo cụm: byte, 2 byte và 4 byte.
+3.	Thực hiện ghi thông tin chuỗi byte và chuỗi bit tương ứng sau hoán đổi trên ra file output.txt theo từng cụm hoán đổi.
+
+Ví dụ:
+-	Có chuỗi byte 0xABCDBADC, đổi ra chuỗi bit ..
+-	Hoán đổi theo cụm byte: 
+10101011 (0xAB) hoán đổi thành 11010101 (0xD5)
+
+-	Hoán đổi theo cụm 2 byte: 
+10101011 11001101 (0xABCD) hoán đổi thành 10110011 11010101 (0xB3D5)
+
+-	Hoán đổi theo cụm 4 byte: 
+10101011110011011011101011011100 (0xABCDBADC) hoán đổi thành 00111011010111011011001111010101 (0x3B5DB3D5)
+
