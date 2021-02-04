@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
-#define max 64
+#define max 256
 char hex[]={'0','1','2','3','4', '5','6','7','8','9','A','B','C','D','E','F','\0'};
 //read data from file data.txt
 void read_file_byte(const char *filename, char *ouput){
@@ -198,11 +198,16 @@ void write_in_file(const char *filename, char *string1, char *string2,int nbyte)
 int main(){
 	// doc chuoi byte tu  file data.txt vaf hien thi chuoi byte va chuoi bit tuong ung len man hinh
 	char a[max];
+	memset(a,0,max);
 	int nbyte;
 	read_file_byte("data.txt",a);
 	printf("chuoi byte trong file: ");
 	display(a);
 	char b[max],c[max],d[max],e[max];
+	memset(b,0,max);
+	memset(c,0,max);
+	memset(d,0,max);
+	memset(e,0,max);
 	bytestring_to_bitstring(a,b);
 	printf("doi thanh chuoi bit:");
 	display(b);
